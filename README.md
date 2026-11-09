@@ -108,6 +108,14 @@ pytest -q
 RUN_INTEGRATION=1 pytest -q     # inclui tradução real (curta e longa)
 ```
 
+### Qualidade de código
+
+O projeto usa o [ruff](https://docs.astral.sh/ruff/) (configuração em `ruff.toml`) como linter e formatador:
+
+```bash
+pip install ruff && ruff check . && ruff format --check .
+```
+
 ## Referências
 
 - Model card: https://huggingface.co/Helsinki-NLP/opus-mt-en-de (licença CC‑BY‑4.0)
