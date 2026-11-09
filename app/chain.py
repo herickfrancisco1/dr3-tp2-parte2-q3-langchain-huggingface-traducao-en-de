@@ -27,4 +27,5 @@ def build_hf_llm(settings: Settings):
 
 
 def build_translation_chain(llm: BaseLLM) -> Runnable:
+    """Monta a cadeia LCEL: prompt de repasse -> HuggingFacePipeline -> parser de texto."""
     return TRANSLATION_PROMPT | llm | StrOutputParser()
